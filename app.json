@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "Melodify",
+    "slug": "melodify",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&q=80",
+    "scheme": "melodify",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&q=80",
+      "resizeMode": "contain",
+      "backgroundColor": "#1a1a1a"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSAppleMusicUsageDescription": "Allow Melodify to access your music library",
+        "UIBackgroundModes": ["audio"]
+      },
+      "bundleIdentifier": "com.melodify.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&q=80",
+        "backgroundColor": "#1a1a1a"
+      },
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "READ_MEDIA_AUDIO"
+      ],
+      "package": "com.melodify.app"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow Melodify to access your photos.",
+          "savePhotosPermission": "Allow Melodify to save photos.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "melodify"
+      }
+    }
+  }
+}
